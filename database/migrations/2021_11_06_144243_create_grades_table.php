@@ -16,6 +16,7 @@ class CreateGradesTable extends Migration
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('teacher_id');
             $table->foreign('teacher_id')->references('id')->on('teachers');
             $table->timestamps();
         });

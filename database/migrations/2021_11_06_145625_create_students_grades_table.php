@@ -15,6 +15,8 @@ class CreateStudentsGradesTable extends Migration
     {
         Schema::create('students_grades', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('student_id');
+            $table->foreignId('grade_id');
             $table->foreign('student_id')->references('id')->on('students');
             $table->foreign('grade_id')->references('id')->on('grades');
             $table->string('seccion');
