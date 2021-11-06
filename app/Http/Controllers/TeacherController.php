@@ -26,8 +26,8 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        $student = new Teacher($request->except(['_token']));
-        $student->save();
+        $teacher = new Teacher($request->except(['_token']));
+        $teacher->save();
         return Redirect::route('teachers.index');
     }
 

@@ -30,8 +30,8 @@ class GradeController extends Controller
      */
     public function store(Request $request)
     {
-        $student = new Grade($request->except(['_token']));
-        $student->save();
+        $grade = new Grade($request->except(['_token']));
+        $grade->save();
         return Redirect::route('grades.index');
     }
 
