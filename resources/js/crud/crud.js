@@ -39,18 +39,6 @@ renderUpdateForm = function(e){
 		cancelBtn.addEventListener("click",renderCreateForm)
 	}
 	const btn = e.currentTarget;
-	const id = btn.getAttribute("data-id");
-	const tr = btn.closest("tr");
-	const name =tr.children[0].innerHTML;
-	const lastname = tr.children[1].innerHTML;
-	const gender = tr.children[2].innerHTML;
-	const birthdate = tr.children[3].innerHTML;
-	form.setAttribute("action",UPDATE_URL+"/"+id);
-	document.getElementById("input-id").value = id;
-	document.getElementById("name").value = name;
-	document.getElementById("lastname").value = lastname;
-	document.getElementById("gender").value = gender;
-	document.getElementById("birthdate").value = birthdate;
-	document.getElementById("btn-create").value = "Modificar";
+	fillForm(btn,form);
 }
 renderCreateForm();

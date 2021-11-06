@@ -69,6 +69,21 @@
 <script type="text/javascript">
 	CREATE_URL = "{{route('students.store')}}";
 	UPDATE_URL = "{{route('students.store')}}";
+	fillForm = function(btn,form){
+		const id = btn.getAttribute("data-id");
+		const tr = btn.closest("tr");
+		const name =tr.children[0].innerHTML;
+		const lastname = tr.children[1].innerHTML;
+		const gender = tr.children[2].innerHTML;
+		const birthdate = tr.children[3].innerHTML;
+		form.setAttribute("action",UPDATE_URL+"/"+id);
+		document.getElementById("input-id").value = id;
+		document.getElementById("name").value = name;
+		document.getElementById("lastname").value = lastname;
+		document.getElementById("gender").value = gender;
+		document.getElementById("birthdate").value = birthdate;
+		document.getElementById("btn-create").value = "Modificar";
+	}
 </script>
 <script type="text/javascript" src="{{asset('js/crud/crud.js')}}"></script>
 @endsection

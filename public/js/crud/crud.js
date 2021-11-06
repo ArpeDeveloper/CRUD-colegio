@@ -140,19 +140,7 @@ renderUpdateForm = function renderUpdateForm(e) {
   }
 
   var btn = e.currentTarget;
-  var id = btn.getAttribute("data-id");
-  var tr = btn.closest("tr");
-  var name = tr.children[0].innerHTML;
-  var lastname = tr.children[1].innerHTML;
-  var gender = tr.children[2].innerHTML;
-  var birthdate = tr.children[3].innerHTML;
-  form.setAttribute("action", UPDATE_URL + "/" + id);
-  document.getElementById("input-id").value = id;
-  document.getElementById("name").value = name;
-  document.getElementById("lastname").value = lastname;
-  document.getElementById("gender").value = gender;
-  document.getElementById("birthdate").value = birthdate;
-  document.getElementById("btn-create").value = "Modificar";
+  fillForm(btn, form);
 };
 
 renderCreateForm();
