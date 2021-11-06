@@ -17,8 +17,7 @@ class CreateTeachersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('lastname');
-            $table->string('gender');
-            $table->date('birthdate');
+            $table->string('gender')->nullable();
             $table->timestamps();
         });
     }
