@@ -31,6 +31,11 @@
 		                        <a class="nav-link active" href="{{ url('/teachers') }}">Profesores</a>
 		                    </li>
 		                @endif
+		                @if (Route::has('grades.index'))
+		                    <li class="nav-item">
+		                        <a class="nav-link active" href="{{ url('/grades') }}">Grados</a>
+		                    </li>
+		                @endif
 					</ul>
 				</div>
 			</div>
