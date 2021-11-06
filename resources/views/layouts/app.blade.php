@@ -26,6 +26,11 @@
 		                        <a class="nav-link active" href="{{ url('/students') }}">Alumnos</a>
 		                    </li>
 		                @endif
+		                @if (Route::has('teachers.index'))
+		                    <li class="nav-item">
+		                        <a class="nav-link active" href="{{ url('/teachers') }}">Profesores</a>
+		                    </li>
+		                @endif
 					</ul>
 				</div>
 			</div>
