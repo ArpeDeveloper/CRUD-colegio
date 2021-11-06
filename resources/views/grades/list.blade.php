@@ -47,7 +47,7 @@
 				<div class="mb-3">
 					<label for="teacher_id" class="form-label">Profesor</label>
 					<select required="" name="teacher_id" type="text" class="form-control" id="teacher_id">
-						<option>Selecciona un profesor</option>
+						<option value="">Selecciona un profesor</option>
 						@foreach($teachers as $teacher)
 						<option value="{{$teacher->id}}">{{$teacher->name}} {{$teacher->lastname}}</option>
 						@endforeach

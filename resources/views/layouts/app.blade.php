@@ -23,17 +23,22 @@
 						
 		                @if (Route::has('students.index'))
 		                    <li class="nav-item">
-		                        <a class="nav-link active" href="{{ url('/students') }}">Alumnos</a>
+		                        <a class="nav-link" href="{{ url('/students') }}">Alumnos</a>
 		                    </li>
 		                @endif
 		                @if (Route::has('teachers.index'))
 		                    <li class="nav-item">
-		                        <a class="nav-link active" href="{{ url('/teachers') }}">Profesores</a>
+		                        <a class="nav-link" href="{{ url('/teachers') }}">Profesores</a>
 		                    </li>
 		                @endif
 		                @if (Route::has('grades.index'))
 		                    <li class="nav-item">
-		                        <a class="nav-link active" href="{{ url('/grades') }}">Grados</a>
+		                        <a class="nav-link" href="{{ url('/grades') }}">Grados</a>
+		                    </li>
+		                @endif
+		                @if (Route::has('studentsgrades.index'))
+		                    <li class="nav-item">
+		                        <a class="nav-link" href="{{ url('/studentsgrades') }}">Insribir alumnos</a>
 		                    </li>
 		                @endif
 					</ul>

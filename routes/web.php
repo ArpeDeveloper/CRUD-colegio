@@ -25,3 +25,6 @@ Route::resource('teachers',TeacherController::class)->except([
 Route::resource('grades',GradeController::class)->except([
     'create', 'show', 'edit'
 ]);
+Route::resource('studentsgrades',StudentsGradeController::class)->except([
+    'create', 'show', 'edit'
+]);

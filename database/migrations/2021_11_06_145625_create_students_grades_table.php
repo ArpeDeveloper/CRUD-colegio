@@ -19,7 +19,7 @@ class CreateStudentsGradesTable extends Migration
             $table->foreignId('grade_id');
             $table->foreign('student_id')->references('id')->on('students');
             $table->foreign('grade_id')->references('id')->on('grades');
-            $table->string('seccion');
+            $table->string('section');
             $table->timestamps();
         });
     }
