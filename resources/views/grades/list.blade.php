@@ -23,7 +23,7 @@
 						<td>{{$grade->name}}</td>
 						<td data-id="{{$grade->teacher_id}}">{{$grade->teacher->name}} {{$grade->teacher->lastname}}</td>
 						<td>
-							<button onclick="renderUpdateForm(event)" data-id="{{$grade->id}}" class="btn-update float-start btn btn-info text-white me-1">Modificar</button>
+							<button onclick="renderUpdateForm(event)" data-id="{{$grade->id}}" class="btn-update float-start btn btn-info text-white me-1 mb-1">Modificar</button>
 							<form class="float-start " action="{{route('grades.destroy',['grade' => $grade->id])}}" method="POST">
 								@method('DELETE')
 								@csrf

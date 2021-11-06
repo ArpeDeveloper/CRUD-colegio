@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Grados')
+@section('title', 'Inscripciones')
 
 @section('content')
 
@@ -25,7 +25,7 @@
 						<td data-id="{{$studentgrade->student_id}}">{{$studentgrade->student->name}} {{$studentgrade->student->lastname}}</td>
 						<td>{{$studentgrade->section}}</td>
 						<td>
-							<button onclick="renderUpdateForm(event)" data-id="{{$studentgrade->id}}" class="btn-update float-start btn btn-info text-white me-1">Modificar</button>
+							<button onclick="renderUpdateForm(event)" data-id="{{$studentgrade->id}}" class="btn-update float-start btn btn-info text-white me-1 mb-1">Modificar</button>
 							<form class="float-start " action="{{route('studentsgrades.destroy',['studentsgrade' => $studentgrade->id])}}" method="POST">
 								@method('DELETE')
 								@csrf
